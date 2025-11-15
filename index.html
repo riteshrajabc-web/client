@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Logo Carousel</title>
+
+    <style>
+        /* Basic page styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* The main container that clips the content */
+        .logo-carousel-container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden; /* This is crucial */
+            position: relative;
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Add a fade-out effect on the edges */
+        .logo-carousel-container::before,
+        .logo-carousel-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100px;
+            z-index: 2;
+        }
+
+        .logo-carousel-container::before {
+            left: 0;
+            background: linear-gradient(to right, white, transparent);
+        }
+
+        .logo-carousel-container::after {
+            right: 0;
+            background: linear-gradient(to left, white, transparent);
+        }
+
+        /* The track that holds and animates the logos */
+        .logo-carousel-track {
+            display: flex;
+            /* This is the animation */
+            animation: scroll 40s linear infinite;
+        }
+
+        /* Styling for the link wrapping the image */
+        .logo-carousel-track a {
+            display: inline-block; /* Helps with layout */
+            text-decoration: none; /* Removes underline */
+            margin: 0 35px; /* Space between logos */
+        }
+
+        /* Styling for the logos */
+        .logo-carousel-track img {
+            height: 70px; /* Standardize the height */
+            width: auto;  /* Let width adjust automatically */
+            filter: grayscale(100%); /* Make them all grayscale for uniformity */
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            display: block; /* Fixes potential layout issues */
+        }
+
+        /* Add hover effects */
+        .logo-carousel-track a:hover img {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        /* The animation keyframes */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                /* Move the track to the left by half its width (the length of one set of logos) */
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Our Valued Clients</h2>
+
+    <div class="logo-carousel-container">
+        <div class="logo-carousel-track">
+            <a href="https://biophore.com/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/biophore.png" alt="Biophore">
+            </a>
+            <a href="https://www.coromandel.biz/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/coromandel.png" alt="Coromandel">
+            </a>
+            <a href="https://www.embassyofficeparks.com/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/embassy.png" alt="Embassy">
+            </a>
+            <a href="https://www.globeinfra.co.in/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/globe infra.png" alt="Globe Infra">
+            </a>
+            <a href="https://gmfclabs.com/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/gmfc-labs.png" alt="GMFC Labs">
+            </a>
+            <a href="https://www.gmrgroup.in/airports/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/gmr.png" alt="GMR">
+            </a>
+            <a href="https://www.iimv.ac.in/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/iim.png" alt="IIM">
+            </a>
+            <a href="https://karlan.in/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/karlan.png" alt="Karlan">
+            </a>
+            <a href="https://lansumproperties.com/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/lansum.png" alt="Lansum">
+            </a>
+            <a href="https://mkbuilders.in/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/mk-buider-and-developer.png" alt="MK Builder">
+            </a>
+            <a href="#" title="MVV (Website URL not provided)">
+                <img src="company_images/mvv.png" alt="MVV">
+            </a>
+            <a href="https://www.nmdc.co.in/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/nmdc-limited.png" alt="NMDC Limited">
+            </a>
+            <a href="https://sardametals.com/#" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/sarda.png" alt="Sarda">
+            </a>
+            <a href="https://dealer-locator.cars.tatamotors.com/tata-motors-cars-showroom-siva-sankar-motors-donddapatti-car-dealer-donddapatti-visakhapatnam-77229/Home" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/tata-motor-shivasankar.png" alt="Tata Motor">
+            </a>
+            <a href="https://ussvizag.in/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/uss.png" alt="USS">
+            </a>
+
+            <a href="https://biophore.com/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/biophore.png" alt="Biophore">
+            </a>
+            <a href="https://www.coromandel.biz/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/coromandel.png" alt="Coromandel">
+            </a>
+            <a href="https://www.embassyofficeparks.com/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/embassy.png" alt="Embassy">
+            </a>
+            <a href="https://www.globeinfra.co.in/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/globe infra.png" alt="Globe Infra">
+            </a>
+            <a href="https://gmfclabs.com/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/gmfc-labs.png" alt="GMFC Labs">
+            </a>
+            <a href="https://www.gmrgroup.in/airports/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/gmr.png" alt="GMR">
+            </a>
+            <a href="https://www.iimv.ac.in/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/iim.png" alt="IIM">
+            </a>
+            <a href="https://karlan.in/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/karlan.png" alt="Karlan">
+            </a>
+            <a href="https://lansumproperties.com/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/lansum.png" alt="Lansum">
+            </a>
+            <a href="https://mkbuilders.in/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/mk-buider-and-developer.png" alt="MK Builder">
+            </a>
+            <a href="#" title="MVV (Website URL not provided)">
+                <img src="company_images/mvv.png" alt="MVV">
+            </a>
+            <a href="https://www.nmdc.co.in/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/nmdc-limited.png" alt="NMDC Limited">
+            </a>
+            <a href="https://sardametals.com/#" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/sarda.png" alt="Sarda">
+            </a>
+            <a href="https://dealer-locator.cars.tatamotors.com/tata-motors-cars-showroom-siva-sankar-motors-donddapatti-car-dealer-donddapatti-visakhapatnam-77229/Home" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/tata-motor-shivasankar.png" alt="Tata Motor">
+            </a>
+            <a href="https://ussvizag.in/" target="_blank" rel="noopener noreferrer">
+                <img src="company_images/uss.png" alt="USS">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // This is an optional enhancement to pause on hover
+        document.addEventListener("DOMContentLoaded", () => {
+            const container = document.querySelector(".logo-carousel-container");
+            const track = document.querySelector(".logo-carousel-track");
+
+            if (track) {
+                // On hover, pause the animation
+                container.addEventListener("mouseenter", () => {
+                    track.style.animationPlayState = "paused";
+                });
+
+                // When mouse leaves, resume the animation
+                container.addEventListener("mouseleave", () => {
+                    track.style.animationPlayState = "running";
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
